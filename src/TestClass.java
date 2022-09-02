@@ -47,7 +47,7 @@ public class TestClass {
 		 * Testing the getCurrentSize method and toArray method
 		 */
 		System.out.println("The array has " + cart.getCurrentSize() + " items");
-		System.out.println("The array contains " + cart.toArray());
+		System.out.println("The array list has items: " + cart.toArray());
 		/**for (int index = 0; index < cart.getCurrentSize(); index++) {
 			System.out.println(cart[index] + " ");
 		}*/
@@ -74,13 +74,15 @@ public class TestClass {
 		 * Testing the getCurrentSize method and toArray method
 		 */
 		System.out.println("The array has " + cart.getCurrentSize() + " units");
-		System.out.println("The array contains " + cart.toArray());
+		System.out.println("The array list has items: " + cart.toArray());
 		
 		/**
 		 * Testing the clear method that clears the array of all items and getCurrentSize method 
 		 */
 		cart.clear();
 		System.out.println("The array has " + cart.getCurrentSize() + " items");
+		
+		System.out.println(cart.contains(new Item("Baking Soda", 4)));
 	}//end main
 
 }//end class
