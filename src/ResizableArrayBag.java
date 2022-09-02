@@ -222,12 +222,6 @@ public final class ResizableArrayBag<T> implements BagInterface<T>
       if (!integrityOK)
          throw new SecurityException ("ArrayBag object is corrupt.");
    } // end checkintegrity
-
-@Override
-public double currentPrice(T[] toArray) {
-	// TODO Auto-generated method stub
-	return 0;
-}
 } // end ResizableArrayBag
 
 /*

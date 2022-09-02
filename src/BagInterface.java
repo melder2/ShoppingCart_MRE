@@ -14,5 +14,4 @@ public interface BagInterface<T> {
 	public boolean contains(T anItem);
 	public T[] toArray();
 	public void clear();
-	public double currentPrice(T[] toArray);
 }//end interface
