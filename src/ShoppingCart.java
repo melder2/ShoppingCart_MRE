@@ -1,6 +1,7 @@
 
 public class ShoppingCart {
-	private ResizableArrayBag<Item> cart;
+	private static ResizableArrayBag<Item> cart;
+	
 	
 	public ShoppingCart() {
 		cart = new ResizableArrayBag<Item>();
@@ -9,7 +10,7 @@ public class ShoppingCart {
 		cart = new ResizableArrayBag<Item>(size);
 	}//end preferred constructor
 	public ShoppingCart(Item[] contents) {
-		cart = new ResizableArrayBag<Item>()[contents];
+		cart = new ResizableArrayBag<Item>(contents);
 	}//end preferred constructor
 	public int getCurrentSize() {
 		return cart.getCurrentSize();
@@ -38,5 +39,12 @@ public class ShoppingCart {
 	public void clear() {
 		cart.clear();
 	}//end clear method
-
+	public double getTotalPrice() {
+	double sum = 0.0;
+		for (int i=0; i<cart.getCurrentSize();i++) {
+			sum = sum + i;
+		}//end getTotalPrice method
+		return sum;
+		
+	}//end getTotalPrice method
 }//end ShoppingCart class

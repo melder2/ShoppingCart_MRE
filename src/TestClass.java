@@ -2,7 +2,7 @@
  * 
  * @author mokel
  * @param <T>
- *
+ *TestClass implements all of the methods of the ShoppingCart class
  */
 public class TestClass {
 
@@ -37,6 +37,11 @@ public class TestClass {
 		cart.add(new Item("Sour Cream", 5));
 		cart.add(new Item("Queso", 6));
 		cart.add(new Item("Salsa", 5));
+		
+		/**
+		 * Testing the boolean part of the add method
+		 */
+		System.out.println(cart.add(new Item("Salsa", 5)));
 		
 		/**
 		 * Testing the isEmpty method and it should return false
@@ -77,12 +82,21 @@ public class TestClass {
 		System.out.println("The array list has items: " + cart.toArray());
 		
 		/**
+		 * Testing the contains method
+		 */
+		System.out.println(cart.contains(new Item("Baking Soda", 4)));
+		System.out.println(cart.contains(new Item("Bread", 6)));
+		
+		/**
+		 * Testing the getTotalPrice method
+		 */
+		System.out.println("The total price of the items is " + cart.getTotalPrice());
+		
+		/**
 		 * Testing the clear method that clears the array of all items and getCurrentSize method 
 		 */
 		cart.clear();
 		System.out.println("The array has " + cart.getCurrentSize() + " items");
-		
-		System.out.println(cart.contains(new Item("Baking Soda", 4)));
 	}//end main
 
 }//end class
